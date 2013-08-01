@@ -1,0 +1,51 @@
+$component-name: '../local/iman-styles-accordion';
+
+.accordion {
+  margin-top: 2px;
+  .accordion__trigger {
+    @include improve-text-rendering;
+    @extend .btn--panel;
+    color: #fff;
+    font-size: 18px;
+    background: $blue-lightest;
+    margin-bottom: -1px;
+    position: relative;
+
+    &:after {
+      @extend .icon-blue-arrow-down;
+      opacity: 0.8;
+      @include show-pseudo-element;
+      @include top-right(20px, 15px);
+    }
+    &.is-open:after {
+      @extend .icon-blue-arrow-up;
+    }
+    &:hover {
+      background: lighten($blue-lightest, 2);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.csstransitions .accordion {
+  .accordion__body {
+    @include transition(height 0.7s ease-in-out());
+    height: 0;
+    overflow: hidden;
+    &.no-transitions {
+      @include transition(none);
+    }
+  }
+}
+
+.no-csstransitions .accordion {
+  & > .accordion__body {
+    display: none;
+  }
+  &.is-open > .accordion__body {
+    display: block;
+  }
+}
