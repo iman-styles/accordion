@@ -1,16 +1,16 @@
 {
   "name": "accordion",
   "main": "index.scss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {},
   "styles": [
     "index.scss"
   ],
   "files": [
-    "down.png",
-    "up.png",
-    "down.svg",
-    "up.svg"
+    "assets/down.png",
+    "assets/up.png",
+    "assets/down.svg",
+    "assets/up.svg"
   ],
   "repo": "https://raw.github.com/iman-styles/accordion"
 }
