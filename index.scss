@@ -12,6 +12,7 @@ $accordion-icon-image-path: "#{$component-path}/iman-styles-accordion/assets" !d
 }
 
 .accordion {
+  border-bottom: 1px solid #d6d6d6;
   margin-top: 2px;
   overflow: hidden;
 
@@ -19,6 +20,7 @@ $accordion-icon-image-path: "#{$component-path}/iman-styles-accordion/assets" !d
     @include linear-gradient(#fafafa, #ddd, top);
     border-radius: 0;
     border: 1px solid #d6d6d6;
+    border-bottom: none;
     box-shadow: 0 2px 3px rgba(#ccc, 0.4);
     color: #777;
     display: block;
